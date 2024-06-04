@@ -12,3 +12,4 @@
 *.iml
 .coverage/
 test_main.http
+.coverage
