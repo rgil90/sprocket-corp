@@ -1,1 +1,1 @@
-from tests.fixture import db_session # noqa: F401
+from tests.fixture import db_session  # noqa: F401
