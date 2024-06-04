@@ -1,0 +1,9 @@
+alembic==1.13.1
+fastapi==0.111.0
+Hypercorn==0.17.3
+psycopg2-binary==2.9.9
+pydantic==2.7.3
+pydantic-settings==2.3.0
+python-dotenv==1.0.1
+requests==2.31.0 ## Fast API TestClient need requests import
+sqlalchemy==2.0.30
