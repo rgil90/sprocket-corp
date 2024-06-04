@@ -15,10 +15,10 @@ Base = declarative_base()
 def get_db_session():
     """
     This function is used to get a database session
-    :return: 
+    :return:
     """
     db = SessionLocal()
     try:
-        yield db
+        return db
     finally:
         db.close()
