@@ -53,7 +53,7 @@ It will create 3 locations and 3 sprocket types.
     open the Swagger UI where you can interact with the API endpoints.
 7. I have also written some tests for the API. You can run the tests by running the following command:
     ```bash
-    docker exec api pytest
+    docker-compose exec api pytest
     ```
    This will run the tests and output the results in the terminal, along with the coverage report to stdout.
 
