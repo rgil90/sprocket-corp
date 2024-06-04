@@ -41,7 +41,7 @@ To get started with the Sprocket Corp. API, follow the steps below:
    ```
 4. SSH into the container to run the database migrations:
    ```bash
-   docker exec api bash
+   docker-compose exec api bash
    alembic -n devdb -c app/migrations/alembic.ini upgrade head
    
    # let's also update the "test" database
