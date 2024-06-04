@@ -23,9 +23,9 @@ services:
       - ./.env
     restart: always
     ports:
-      - "5433:5432"
+      - "5434:5434"
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - test-db-data:/var/lib/postgresql/data
       - ./scripts:/docker-entrypoint-initdb.d
     networks:
       - dev-network
@@ -47,13 +47,14 @@ services:
       - "8000:8000"
     depends_on:
       - db
+      - test-db
     links:
       - db
+      - test-db
     volumes:
       - type: bind
         source: .
         target: /usr/src/app/
-      - /var/run/docker.sock:/var/run/docker.sock
     networks:
         - dev-network
   adminer:
@@ -63,8 +64,10 @@ services:
       - "8080:8080"
     depends_on:
       - db
+      - test-db
     links:
       - db
+      - test-db
     networks:
         - dev-network
 
