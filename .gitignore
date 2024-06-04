@@ -11,3 +11,4 @@
 *.xml
 *.iml
 .coverage/
+test_main.http
